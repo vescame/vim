@@ -60,6 +60,9 @@ filetype plugin indent on
 " for performance while executing macros, IO is heavy bro
 set lazyredraw
 
+" no comment when we create a new line starting by a commented line
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " => RUNTIME
 for $_RUNTIMEFILE in split(system('ls ~/.vim/after'))
   let b:runtimefile=globpath('~/.vim/after', $_RUNTIMEFILE)
