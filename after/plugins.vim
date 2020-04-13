@@ -9,6 +9,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 call plug#end()
 

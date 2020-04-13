@@ -14,7 +14,12 @@ map <leader>tp :tabprevious<cr>
 " => BUFFERS
 map <leader>bn :bnext<cr>
 map <leader>bp :bprevious<cr>
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>bd :bdelete<cr>:tabclose<cr>gT
 
 " => PASTE MODE
 map <leader>ep! :set paste!<cr>
+
+" => ALE
+nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
+nmap <silent> <leader>an <Plug>(ale_next_wrap)
+
