@@ -23,3 +23,9 @@ map <leader>ep! :set paste!<cr>
 nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
 nmap <silent> <leader>an <Plug>(ale_next_wrap)
 
+" => CASE CHANGING
+nmap <silent> <leader>lw bguw
+nmap <silent> <leader>uw bgUw
+nmap <silent> <leader>lc gul
+nmap <silent> <leader>uc gUl
+
