@@ -28,6 +28,9 @@ set clipboard=unnamed,unnamedplus
 " numbers and relative number
 set number relativenumber
 
+" highlight current line
+set cursorline
+
 " file encoding
 set encoding=utf-8
 set fileencoding=utf-8
