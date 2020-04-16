@@ -4,7 +4,7 @@
 [._]*.sw[a-p]
 [._]s[a-rt-v][a-z]
 [._]ss[a-gi-z]
-[._]sw[a-p]
+[._]sw[a-p]*
 
 # Session
 Session.vim
@@ -20,8 +20,9 @@ tags
 # Persistent undo
 [._]*.un~
 
-# Undodir
+# [Undo, Backup]dir
 .undodir/
+.backupdir/
 
 # Plugins
 plugged/
