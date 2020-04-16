@@ -22,6 +22,9 @@ set background=dark
 " enable syntax hightlight
 syntax on
 
+" shared cliboard
+set clipboard=unnamed,unnamedplus
+
 " numbers and relative number
 set number relativenumber
 
@@ -101,5 +104,30 @@ catch
 finally
   set undodir=~/.vim/.undodir
   set undofile
+endtry
+
+" backup directory
+try
+  if !isdirectory('~/.vim/.backupdir')
+    throw
+  endif
+catch
+  silent !mkdir -p ~/.vim/.backupdir > /dev/null 2>&1
+finally
+  set backup
+  set writebackup
+  set backupcopy=no
+  set backupdir=~/.vim/.backupdir
+endtry
+
+" swap directory
+try
+  if !isdirectory('~/.vim/.swapdir')
+    throw
+  endif
+catch
+  silent !mkdir -p ~/.vim/.swapdir > /dev/null 2>&1
+finally
+  set directory=~/.vim/.swapdir
 endtry
 
