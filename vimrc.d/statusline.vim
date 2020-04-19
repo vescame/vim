@@ -3,10 +3,18 @@ set laststatus=2
 
 " my custom statuline
 " set statusline=\ %{getcwd()}
-set statusline=\ %{fugitive#head()}
-set statusline+=\ -
+if exists("*FugitiveHead")
+  set statusline=\ %{fugitive#head()}
+  set statusline+=\ -
+endif
 set statusline+=\ %F%m%r%h
 set statusline+=%=
+
+" ale status
+if exists("*ale#statusline#Count")
+  set statusline+=%{LinterStatus()}
+endif
+
 set statusline+=\ %y\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=[%{&fileformat}]
 set statusline+=\ %p%%
