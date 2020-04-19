@@ -87,6 +87,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " by default, when vertically spliting, use right for the new window
 set splitright
 
+" runtime essential files
+runtime plugins.vim
+if exists("*plug#begin")
+  runtime runtimerc.vim
 endif
 runtime helpers.vim
 
