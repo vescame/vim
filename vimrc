@@ -24,6 +24,11 @@ set nocompatible
 " dark background
 set background=dark
 
+" dark background in gui mode, without the need to assign a colorscheme
+if has("gui")
+  highlight Normal guifg=white guibg=black
+endif
+
 " enable syntax hightlight
 syntax on
 
