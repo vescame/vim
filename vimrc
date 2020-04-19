@@ -1,15 +1,17 @@
-" ~/.vim/vimrc
-" ============
+" yet another vim config
+" 2020
+" github.com/vescame
+" v.escame@gmail.com
 
 " remove all autocommands so i can assign it only once
 autocmd!
 
-" set my vimrc dir (importante for portable config
+" set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 
-" runtime essential files
-runtime runtimerc.vim
-runtime helpers.vim
+" add vimrc.d to runtimepath
+let g:vimrc_dir=globpath(g:vim_dir, "vimrc.d")
+silent execute "set runtimepath+=" . g:vimrc_dir
 
 " stop weird bells
 set noerrorbells
