@@ -67,7 +67,7 @@ set incsearch      " search while typing
 " show completion in menu
 set wildmenu
 
-" fast jump to and get back from closing bracket
+" highlight matching bracket
 set showmatch
 
 " show parcial command line status
