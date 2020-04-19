@@ -102,40 +102,11 @@ else
   set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 
-" undo directory for undo files
-try
-  if !isdirectory('~/.vim/.undodir')
-    throw
-  endif
-catch
-  silent !mkdir -p ~/.vim/.undodir > /dev/null 2>&1
-finally
-  set undodir=~/.vim/.undodir
-  set undofile
-endtry
+" functions in ./helpers.vim
+" use verbose function <function_name> to see it's code
+call EnableBackupdir()
 
-" backup directory
-try
-  if !isdirectory('~/.vim/.backupdir')
-    throw
-  endif
-catch
-  silent !mkdir -p ~/.vim/.backupdir > /dev/null 2>&1
-finally
-  set backup
-  set writebackup
-  set backupcopy=no
-  set backupdir=~/.vim/.backupdir
-endtry
+call EnableSwapdir()
 
-" swap directory
-try
-  if !isdirectory('~/.vim/.swapdir')
-    throw
-  endif
-catch
-  silent !mkdir -p ~/.vim/.swapdir > /dev/null 2>&1
-finally
-  set directory=~/.vim/.swapdir
-endtry
+call EnableUndodir()
 

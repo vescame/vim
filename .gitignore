@@ -21,10 +21,10 @@ tags
 [._]*.un~
 
 # [Undo, Backup]dir
-.undodir/
-.backupdir/
+[._]undodir
+[._]backupdir
 
 # Plugins
-plugged/
-autoload/
+plugged
+autoload
 
