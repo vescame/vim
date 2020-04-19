@@ -1,5 +1,9 @@
 " => MAPPINGS
 " ===========
+
+" all mighty leader key mapped to space
+let mapleader=" "
+
 " remove highlighting
 map <silent> <leader><cr> :noh<cr>
 

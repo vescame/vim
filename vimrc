@@ -1,10 +1,15 @@
 " ~/.vim/vimrc
 " ============
+
 " remove all autocommands so i can assign it only once
 autocmd!
 
-" all mighty leader key mapped to space
-let mapleader=" "
+" set my vimrc dir (importante for portable config
+let g:vim_dir=fnamemodify($MYVIMRC, ":h")
+
+" runtime essential files
+runtime runtimerc.vim
+runtime helpers.vim
 
 " stop weird bells
 set noerrorbells
