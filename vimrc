@@ -35,6 +35,9 @@ syntax on
 " shared cliboard
 set clipboard=unnamed,unnamedplus
 
+" backspace for deleting too
+set backspace=indent,eol,start
+
 " numbers and relative number
 set number relativenumber
 
