@@ -118,3 +118,5 @@ call EnableSwapdir()
 
 call EnableUndodir()
 
+" by default, when vertically spliting, use right for the new window
+set splitright
