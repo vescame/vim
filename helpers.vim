@@ -2,7 +2,9 @@
 function! CreateDir(dirpath)
   if !isdirectory(a:dirpath)
     if has("unix")
-      silent execute "!mkdir " . fnameescape(a:dirpath) . " > /dev/null 2>&1")
+      silent execute "!mkdir "
+            \ . expand(fnameescape(a:dirpath))
+            \ . " > /dev/null 2>&1"
     else
       silent execute "!mkdir " . expand(fnameescape(a:dirpath))
     endif
@@ -11,45 +13,53 @@ endfunction
 
 " undo directory for undo files
 function! EnableUndodir()
-  if has("unix")
-    let l:myundodir=globpath(g:vim_dir, ".undodir")
-  else
-    let l:myundodir=globpath(g:vim_dir, "_undodir")
+  let l:myundodir=g:vim_dir . "/.undodir"
+  if has("win32")
+    let l:myundodir=g:vim_dir . "/_undodir"
   endif
 
-  call CreateDir(l:myundodir)
+  if !empty(l:myundodir)
+    call CreateDir(l:myundodir)
 
-  silent execute "set undodir=" . l:myundodir
-  set undofile
+    silent execute "set undodir=" . l:myundodir
+    set undofile
+  endif
 endfunction
-
 
 " backup directory
 function! EnableBackupdir()
-  if has("unix")
-    let l:mybackupdir=globpath(g:vim_dir, ".backupdir")
-  else
-    let l:mybackupdir=globpath(g:vim_dir, "_backupdir")
+  let l:mybackupdir=g:vim_dir . "/.backupdir"
+  if has("win32")
+    let l:mybackupdir=g:vim_dir . "/_backupdir"
   endif
 
-  call CreateDir(l:mybackupdir)
+  if !empty(l:mybackupdir)
+    call CreateDir(l:mybackupdir)
 
-  set backup
-  set writebackup
-  set backupcopy=no
-  silent execute "set backupdir=" . l:mybackupdir
+    set backup
+    set writebackup
+    set backupcopy=no
+    silent execute "set backupdir=" . l:mybackupdir
+  endif
 endfunction
 
 " swap directory
 function! EnableSwapdir()
-  if has("unix")
-    let l:myswapdir=globpath(g:vim_dir, ".swapdir")
-  else
-    let l:myswapdir=globpath(g:vim_dir, "_swapdir")
+  let l:myswapdir=g:vim_dir . "/.swapdir"
+  if has("win32")
+    let l:myswapdir=g:vim_dir . "/_swapdir"
   endif
 
-  call CreateDir(l:myswapdir)
+  if !empty(l:myswapdir)
+    call CreateDir(l:myswapdir)
 
-  silent execute "set directory=" . l:myswapdir
+    set swapfile
+    silent execute "set directory=" . l:myswapdir
+  endif
 endfunction
 
+call EnableBackupdir()
+
+call EnableSwapdir()
+
+call EnableUndodir()

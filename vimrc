@@ -103,12 +103,5 @@ if has("win16") || has("win32")
 else
   set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
-
-" functions in ./helpers.vim
-" use verbose function <function_name> to see it's code
-call EnableBackupdir()
-
-call EnableSwapdir()
-
-call EnableUndodir()
+runtime helpers.vim
 
