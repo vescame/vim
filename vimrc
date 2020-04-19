@@ -82,21 +82,13 @@ set lazyredraw
 " no comment when we create a new line starting by a commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" => RUNTIME
-for $_RUNTIMEFILE in split(system('ls ~/.vim/after'))
-  let b:runtimefile=globpath('~/.vim/after', $_RUNTIMEFILE)
-  if filereadable(b:runtimefile)
-    runtime $_RUNTIMEFILE
-  endif
-  unlet $_RUNTIMEFILE
-endfor
+" by default, when vertically spliting, use right for the new window
+set splitright
 
 " => MISC UTILITIES
 " =================
 " reopen under the last cursor edit position
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " read when file changed
 set autoread
@@ -118,5 +110,3 @@ call EnableSwapdir()
 
 call EnableUndodir()
 
-" by default, when vertically spliting, use right for the new window
-set splitright
