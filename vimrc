@@ -87,21 +87,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " by default, when vertically spliting, use right for the new window
 set splitright
 
-" => MISC UTILITIES
-" =================
-" reopen under the last cursor edit position
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" read when file changed
-set autoread
-au FocusGained,BufEnter * checktime
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-  set wildignore+=.git\*,.hg\*,.svn\*
-else
-  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 runtime helpers.vim
 
