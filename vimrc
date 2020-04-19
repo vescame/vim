@@ -48,8 +48,11 @@ set cursorline
 
 " file encoding
 set encoding=utf-8
-set fileencoding=utf-8
-set ffs=unix,dos,mac " *nix as std file type
+set ffs=unix,dos,mac " unix for default file format
+autocmd BufReadPre *
+      \ if &modifiable
+      \ |   silent execute "set fileencoding=utf-8"
+      \ | endif
 
 set autoindent smartindent " smart indentation
 set wrap                   " wrap long lines 'on the next line'
