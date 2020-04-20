@@ -3,15 +3,22 @@
 " github.com/vescame
 " v.escame@gmail.com
 
-" remove all autocommands so i can assign it only once
+" no vi extended compatibility
+" should be set at the very beginning
+set nocompatible
+
+" remove all auto commands so i can assign it only once
 autocmd!
 
 " set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 
-" add vimrc.d to runtimepath
+" add vimrc.d to run time path
 let g:vimrc_dir=globpath(g:vim_dir, "vimrc.d")
 silent execute "set runtimepath+=" . g:vimrc_dir
+
+" search recursively
+set path+=**
 
 " stop weird bells
 set noerrorbells
@@ -20,16 +27,13 @@ set visualbell " this way works WSL
 set t_vb=
 set tm=500
 
-" no vi extended compatibility
-set nocompatible
-
 " dark background
 set background=dark
 
-" enable syntax hightlight
+" enable syntax highlight
 syntax on
 
-" shared cliboard
+" shared clipboard
 set clipboard=unnamed,unnamedplus
 
 " backspace for deleting too
@@ -70,10 +74,10 @@ set wildmenu
 " highlight matching bracket
 set showmatch
 
-" show parcial command line status
+" show partial command line status
 set showcmd
 
-" filetype plugins enabled
+" file type plugins enabled
 filetype plugin indent on
 
 " for performance while executing macros, IO is heavy bro
@@ -82,10 +86,10 @@ set lazyredraw
 " no comment when we create a new line starting by a commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" by default, when vertically spliting, use right for the new window
+" by default, when vertically splitting, use right for the new window
 set splitright
 
-" runtime essential files
+" run time essential files
 runtime plugins.vim
 if exists("*plug#begin")
   runtime runtimerc.vim
