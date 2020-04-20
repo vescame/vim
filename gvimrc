@@ -19,3 +19,10 @@ endfunction
 autocmd VimEnter * call ToggleGuiOpts()
 command GuiOpts :call ToggleGuiOpts()
 
+" from help tm: 
+" Define a tip for a menu or tool.  {only in X11 and Win32 GUI}
+set tm=500
+
+" termcap visualbell
+set t_vb=
+

@@ -22,10 +22,8 @@ set path+=**
 
 " stop weird bells
 set noerrorbells
-"" set novisualbell
+" set visualbell instead of beeps
 set visualbell " this way works WSL
-set t_vb=
-set tm=500
 
 " dark background
 set background=dark
