@@ -15,4 +15,6 @@ let b:plugins_dir=g:vim_dir . "/plugged"
 call plug#begin(b:plugins_dir)
 Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
+Plug 'pbrisbin/vim-colors-off'
 call plug#end()
+
