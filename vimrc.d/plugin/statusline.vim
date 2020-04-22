@@ -3,17 +3,16 @@ set laststatus=2
 
 " my custom statuline
 " set statusline=\ %{getcwd()}
-if exists("*FugitiveHead")
-  set statusline=\ %{fugitive#head()}
-  set statusline+=\ -
-endif
+
+" git status from fugitive
+set statusline=\ %{fugitive#head()}
+set statusline+=\ -
+
 set statusline+=\ %F%m%r%h
 set statusline+=%=
 
 " ale status
-if exists("*ale#statusline#Count")
-  set statusline+=%{LinterStatus()}
-endif
+set statusline+=%{LinterStatus()}
 
 set statusline+=\ %y\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=[%{&fileformat}]
