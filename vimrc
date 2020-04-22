@@ -13,10 +13,6 @@ autocmd!
 " set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 
-" add vimrc.d to run time path
-let g:vimrc_dir=globpath(g:vim_dir, "vimrc.d")
-silent execute "set runtimepath+=" . g:vimrc_dir
-
 " search recursively
 set path+=**
 
@@ -46,10 +42,7 @@ set cursorline
 " file encoding
 set encoding=utf-8
 set ffs=unix,dos,mac " unix for default file format
-autocmd BufReadPre *
-      \ if &modifiable
-      \ |   silent execute "set fileencoding=utf-8"
-      \ | endif
+setglobal fileencoding=utf-8
 
 set autoindent smartindent " smart indentation
 set wrap                   " wrap long lines 'on the next line'
@@ -87,10 +80,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " by default, when vertically splitting, use right for the new window
 set splitright
 
-" run time essential files
-runtime plugins.vim
-if exists("*plug#begin")
-  runtime runtimerc.vim
-endif
-runtime helpers.vim
+" initialize vimrc files load
+runtime vimrc.d/init.vim
 

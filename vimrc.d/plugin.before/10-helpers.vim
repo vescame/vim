@@ -1,3 +1,8 @@
+" helpers.vim
+" file containing useful functions for vim basic related,
+" like set backup enabled, considering the Operating system
+" =============================================== 
+
 " for directory creation
 function! CreateDir(dirpath)
   if !isdirectory(a:dirpath)
@@ -63,3 +68,4 @@ call EnableBackupdir()
 call EnableSwapdir()
 
 call EnableUndodir()
+
