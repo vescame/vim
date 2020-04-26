@@ -89,7 +89,7 @@ filetype plugin indent on
 " for performance while executing macros, IO is heavy bro
 set lazyredraw
 
-" expose extra whitespaces
+" expose extra white spaces
 set list listchars=tab:»·,trail:·,nbsp:·
 
 " no comment when we create a new line starting by a commented line
@@ -102,6 +102,10 @@ set splitright
 " use vertical diff by default
 set diffopt+=vertical
 
-" initialize vimrc files load
+" spell
+set spell
+set spelllang=en_gb
+
+  " initialize vimrc files load
 runtime vimrc.d/init.vim
 
