@@ -1,3 +1,7 @@
+" gvimrc.vim
+" loaded when gui_running, this is a vim core file
+" ===============================================
+
 " dark background in gui mode, without the need to assign a colorscheme
 highlight Normal guifg=white guibg=black
 
