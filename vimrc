@@ -18,8 +18,16 @@ set path+=**
 
 " stop weird bells
 set noerrorbells
-" set visualbell instead of beeps
-set visualbell " this way works WSL
+if has('unix')
+  if exists("$WT_PROFILE_ID")
+    " if in windows terminal
+    set novisualbell
+  else
+    " set visualbell instead of beeps (this way works in WSL)
+    set visualbell
+  endif
+endif
+
 
 " dark background
 set background=dark
