@@ -57,6 +57,7 @@ setglobal fileencoding=utf-8
 
 set autoindent smartindent " smart indentation
 set wrap                   " wrap long lines 'on the next line'
+set formatoptions+=t       " since wrap is enabled, wrap starts at the 80th
 
 " => TABS ARE EVIL
 " ================
