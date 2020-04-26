@@ -1,3 +1,7 @@
+" statuline.vim
+" sets some custom and useful functions to vim core statusline
+" ===============================================
+
 " Always show the status line
 set laststatus=2
 
@@ -19,4 +23,5 @@ set statusline+=[%{&fileformat}]
 set statusline+=\ %p%%
 set statusline+=\ %L
 set statusline+=\ %l:%c
+set statusline+=\ 
 

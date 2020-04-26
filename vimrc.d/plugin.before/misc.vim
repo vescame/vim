@@ -1,3 +1,7 @@
+" misc.vim
+" miscelaneous configuration
+" ===============================================
+
 " reopen under the last cursor edit position
 autocmd BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$")
@@ -15,3 +19,4 @@ if has("win32")
 else
   set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
+

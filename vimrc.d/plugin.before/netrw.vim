@@ -1,3 +1,7 @@
+" netrw.vim
+" core netrw vim configuration
+" ===============================================
+
 " no banner
 let g:netrw_banner=0
 

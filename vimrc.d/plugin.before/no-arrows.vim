@@ -1,3 +1,7 @@
+" no-arrows.vim
+" unset arrow keys when using vim
+" ===============================================
+
 " no arrows for moving
 noremap <Up> <Nop>
 noremap <Down> <Nop>

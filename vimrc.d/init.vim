@@ -1,22 +1,16 @@
-" loads files to be loaded before ./plugin directory
-function! AppendToRuntimePath(path)
-	if isdirectory(a:path)
-		silent execute "set runtimepath+=" . a:path
-	endif
-endfunction
+" init.vim
+" file initializes the vimrc.d sourcing and plugins
+" ===============================================
 
-" add vimrc.d to run time path
+" vimrc.d  directory
 let g:vimrc_dir=globpath(g:vim_dir, "vimrc.d")
 
-" plugins loaded before
-let s:plugin_before_dir=globpath(g:vimrc_dir, "plugin.before")
+" load useful functions
+silent execute "set runtimepath+=" . g:vimrc_dir
 
-call AppendToRuntimePath(g:vimrc_dir)
+" early run time useful functions
+runtime functions.vim
 
-call AppendToRuntimePath(s:plugin_before_dir)
-
-" early run time essential files
-for b:file in split(globpath(s:plugin_before_dir, "*"))
-  silent execute "runtime" fnamemodify(b:file, ":t")
-endfor
+" run time plugin manager and conf loader
+runtime plugins.vim
 
