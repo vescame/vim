@@ -106,6 +106,6 @@ set diffopt+=vertical
 set spell
 set spelllang=en_gb
 
-  " initialize vimrc files load
+" initialize vimrc files load
 runtime vimrc.d/init.vim
 
