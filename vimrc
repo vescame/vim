@@ -104,8 +104,7 @@ set splitright
 set diffopt+=vertical
 
 " spell
-set spell
-set spelllang=en_gb
+set spelllang=en_gb,pt_br
 
 " initialize vimrc files load
 runtime vimrc.d/init.vim
