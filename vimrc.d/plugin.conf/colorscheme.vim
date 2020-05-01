@@ -12,5 +12,8 @@ if g:colors_name == "off" && exists("$WT_PROFILE_ID")
   highlight StatusLine ctermbg=7 ctermfg=0
   highlight Visual ctermbg=7 ctermfg=0
   highlight StatusLineNC ctermbg=7 ctermfg=0
+  highlight TabLine ctermbg=8 ctermfg=11
+  highlight TabLineFill ctermbg=8 ctermfg=11
+  highlight TabLineSel ctermbg=7 ctermfg=0
 endif
 
