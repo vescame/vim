@@ -2,26 +2,25 @@
 " core vim keybinding configuration
 " ===============================================
 
-
 " all mighty leader key mapped to space
 let mapleader=" "
 
 " remove highlighting
-map <silent> <leader><cr> :noh<cr>
+nnoremap <silent> <leader><cr> :noh<cr>
 
 " => TABS
-map <leader>tN :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove<cr>
+nnoremap <leader>tN :tabnew<cr>
+nnoremap <leader>to :tabonly<cr>
+nnoremap <leader>tc :tabclose<cr>
+nnoremap <leader>tm :tabmove<cr>
 
 " => BUFFERS
-map <leader>bn :bnext<cr>
-map <leader>bp :bprevious<cr>
-map <leader>bd :bdelete<cr>:tabclose<cr>gT
+nnoremap <leader>bn :bnext<cr>
+nnoremap <leader>bp :bprevious<cr>
+nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
 
 " => PASTE MODE
-map <leader>ep! :set paste!<cr>
+nnoremap <leader>ep! :set paste!<cr>
 
 " => CASE CHANGING
 nmap <silent> <leader>lw bguw
