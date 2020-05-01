@@ -22,9 +22,4 @@ nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
 " => PASTE MODE
 nnoremap <leader>ep! :set paste!<cr>
 
-" => CASE CHANGING
-nmap <silent> <leader>lw bguw
-nmap <silent> <leader>uw bgUw
-nmap <silent> <leader>lc gul
-nmap <silent> <leader>uc gUl
 
