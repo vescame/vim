@@ -16,17 +16,9 @@ let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 " search recursively
 set path+=**
 
-" stop weird bells
-set noerrorbells
-if has('unix')
-  if exists("$WT_PROFILE_ID")
-    " if in windows terminal
-    set novisualbell
-  else
-    " set visualbell instead of beeps (this way works in WSL)
-    set visualbell
-  endif
-endif
+" completely stop bells
+set visualbell
+set t_vb=
 
 " dark background
 set background=dark
@@ -52,7 +44,7 @@ set cursorline
 
 " file encoding
 set encoding=utf-8
-set ffs=unix,dos,mac " unix for default file format
+set ffs=unix,dos,mac " Unix for default file format
 setglobal fileencoding=utf-8
 
 set autoindent smartindent " smart indentation
