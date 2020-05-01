@@ -22,4 +22,9 @@ nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
 " => PASTE MODE
 nnoremap <leader>ep! :set paste!<cr>
 
+" => MOVE LINES
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
