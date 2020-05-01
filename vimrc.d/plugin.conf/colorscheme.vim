@@ -15,5 +15,6 @@ if g:colors_name == "off" && exists("$WT_PROFILE_ID")
   highlight TabLine ctermbg=8 ctermfg=11
   highlight TabLineFill ctermbg=8 ctermfg=11
   highlight TabLineSel ctermbg=7 ctermfg=0
+  highlight VertSplit ctermbg=9 ctermfg=9
 endif
 
