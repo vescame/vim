@@ -5,7 +5,7 @@
 " pretty basic colors, nothing colorful
 colorscheme off
 
-if g:colors_name == "off" && exists("$WT_PROFILE_ID")
+if g:colors_name == "off" && &shell == "powershell.exe"
   highlight CursorLine ctermbg=8 ctermfg=0
   highlight CursorLineNr ctermbg=8 ctermfg=1
   highlight LineNr ctermfg=8
