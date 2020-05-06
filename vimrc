@@ -98,6 +98,9 @@ set diffopt+=vertical
 " spell
 set spelllang=en_gb,pt_br
 
+" highlight every char after the 80th column
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
 " initialize vimrc files load
 runtime vimrc.d/init.vim
 
