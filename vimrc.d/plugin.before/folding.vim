@@ -5,5 +5,5 @@
 set foldenable
 set foldlevelstart=2
 set foldnestmax=5
-set foldmethod=indent
+set foldmethod=manual
 
