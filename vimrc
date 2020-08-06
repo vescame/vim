@@ -82,8 +82,12 @@ filetype plugin indent on
 " for performance while executing macros, IO is heavy bro
 set lazyredraw
 
-" expose extra white spaces
-set list listchars=tab:»·,trail:·,nbsp:·
+" expose special characters
+if $LANG =~ "utf-8"
+  set list listchars=tab:»·,trail:·,nbsp:·
+else
+  set list listchars=tab:>-,trail:.,nbsp:%
+endif
 
 " no comment when we create a new line starting by a commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -100,7 +104,4 @@ set spelllang=en_gb,pt_br
 
 " highlight every char after the 80th column
 au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-
-" initialize vimrc files load
-runtime vimrc.d/init.vim
 
