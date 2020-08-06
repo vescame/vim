@@ -3,7 +3,8 @@
 " ===============================================
 
 " pretty basic colors, nothing colorful
-colorscheme off
+" colorscheme off
+colorscheme default
 
 if g:colors_name == "off" && &shell == "powershell.exe"
   highlight CursorLine ctermbg=8 ctermfg=0
