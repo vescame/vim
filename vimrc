@@ -10,6 +10,9 @@ set nocompatible
 " remove all auto commands so i can assign it only once
 autocmd!
 
+" leader key mapped to space
+let mapleader=" "
+
 " set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 
