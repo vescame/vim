@@ -1,17 +1,17 @@
-# Simple ~Plan~ Vim
-#### I'm using with vim versions like 8.1 ~ 8.2
+# simple vim
+#### I was using with vim versions like 8.1 ~ 8.2
+#### slackware vim version: 7.4
 
 has:
 - some linter
-- some colorscheme
 - some git
 
-I plan to add:
-- some colorscheme
+plan to add:
+- be minimal
 - some completion
-- some support for jenkinsfile, dockerfile, vagrantfile and some other new things
+- some support for jenkinsfile, dockerfile, vagrantfile etc
 
 currently has 3 plugins:
 - vim-fugitive
 - ale
-- vim-colors-off (my silly fork where I only removed italic and lightened the comment colouring)
+
