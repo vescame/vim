@@ -13,6 +13,8 @@ autocmd!
 " leader key mapped to space
 let mapleader=" "
 
+let dircolors_is_slackware=1
+
 " set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
 
