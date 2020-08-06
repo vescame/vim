@@ -1,6 +1,5 @@
 " folding.vim
 " vim core folding configuration
-" =====================================
 
 set foldenable
 set foldlevelstart=2

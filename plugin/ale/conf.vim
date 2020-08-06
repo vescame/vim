@@ -1,6 +1,5 @@
 " ale.vim
 " Ale is a general linter
-" ===============================================
 
 nmap <silent> <leader>ap <Plug>(ale_previous_wrap)
 nmap <silent> <leader>an <Plug>(ale_next_wrap)

@@ -1,6 +1,5 @@
 " misc.vim
 " miscelaneous configuration
-" ===============================================
 
 " reopen under the last cursor edit position
 autocmd BufReadPost *

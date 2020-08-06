@@ -1,6 +1,5 @@
 " statuline.vim
 " sets some custom and useful functions to vim core statusline
-" ===============================================
 
 " Always show the status line
 set laststatus=2

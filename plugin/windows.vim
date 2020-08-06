@@ -1,6 +1,5 @@
 " windows.vim
-" set some windows related options
-" =====================================
+" set some windows related configuration
 
 " change from cmd to powershell
 if has('win32')
