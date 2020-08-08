@@ -23,9 +23,6 @@ tags
 [._]undodir
 [._]backupdir
 
-# Plugins
-autoload
-
 # do not ignore clone-repos.sh
 pack/*
 !.pack/clone-repos.sh
