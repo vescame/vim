@@ -12,9 +12,9 @@ endfunction
 function core#createDir(dirpath)
   if !isdirectory(a:dirpath)
     if has("unix")
-      silent execute "!mkdir "
+      silent execute "!/bin/sh -c 'mkdir "
             \ . expand(fnameescape(a:dirpath))
-            \ . " > /dev/null 2>&1"
+            \ . " > /dev/null 2>&1'"
     else
       silent execute "!mkdir " . expand(fnameescape(a:dirpath))
     endif
