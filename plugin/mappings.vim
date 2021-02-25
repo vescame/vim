@@ -4,28 +4,52 @@
 " remove highlighting
 nnoremap <silent> <leader><cr> :noh<cr>
 
-" => TABS
+" better movement
+nmap j gj
+nmap k gk
+vmap j gj
+vmap k gk
+
+" brackets completion
+inoremap ( ()<Esc>i
+inoremap { {}<Esc>i
+inoremap {<CR> {<CR>}<Esc>O
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+
+" yank to $
+nnoremap Y y$
+
+" visit ALE errors
+nnoremap <leader>an :ALENext
+nnoremap <leader>ap :ALEPrevious
+nnoremap <leader>ad :ALEDetail
+
+" tabs navigation
 nnoremap <leader>tN :tabnew<cr>
 nnoremap <leader>to :tabonly<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>tm :tabmove<cr>
 
-" => BUFFERS
+" buffer navigation
 nnoremap <leader>bn :bnext<cr>
 nnoremap <leader>bp :bprevious<cr>
 nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
 
-" => PASTE MODE
+" enable paste (very useful)
 nnoremap <leader>ep! :set paste!<cr>
 
-" => MOVE LINES
+" move lines up/down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-" => REMOVE TRAILING WHITE SPACES
+" remove trailing spaces
 vnoremap <leader>rtw :s/\s\+$//e<cr>
+nnoremap <leader>rtw :s/\s\+$//e<cr>
 
 " no arrows for move around
 noremap <Up> <Nop>
@@ -42,4 +66,8 @@ vnoremap <Up> <Nop>
 vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
+
+" tabulation does not exit visual mode
+vnoremap < <gv
+vnoremap > >gv
 
