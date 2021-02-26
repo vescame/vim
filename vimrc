@@ -1,19 +1,19 @@
-" yet another vim config
-" 2020
-" github.com/vescame
-" v.escame@gmail.com
+" vimrc
+" author: vescm
+" year: 2020
 
 " no vi extended compatibility
 " should be set at the very beginning
 set nocompatible
+
+" spell
+set spelllang=en_gb,pt_br
 
 " remove all auto commands so i can assign it only once
 autocmd!
 
 " leader key mapped to space
 let mapleader=" "
-
-let dircolors_is_slackware=1
 
 " set my ~/[._]vim directory (for portable config)
 let g:vim_dir=fnamemodify($MYVIMRC, ":h")
@@ -25,18 +25,8 @@ set path+=**
 set visualbell
 set t_vb=
 
-" dark background
-set background=dark
-
 " enable syntax highlight
 syntax on
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
-
-" shared clipboard
-set clipboard=unnamed,unnamedplus
 
 " backspace for deleting too
 set backspace=indent,eol,start
@@ -44,30 +34,45 @@ set backspace=indent,eol,start
 " numbers and relative number
 set number relativenumber
 
-" highlight current line
-set cursorline
-
 " file encoding
 set encoding=utf-8
-set ffs=unix,dos,mac " Unix for default file format
+
+" Unix for default file format
+set ffs=unix,dos,mac
 setglobal fileencoding=utf-8
 
-set autoindent smartindent " smart indentation
-set wrap                   " wrap long lines 'on the next line'
-set formatoptions+=t       " since wrap is enabled, wrap starts at the 80th
+" Make it obvious where 80 characters is
+set textwidth=79
+set colorcolumn=+1
 
-" => TABS ARE EVIL
-" ================
-set shiftwidth=2   " number of spaces to use for (auto)indent step
-set tabstop=2      " tab spaces
+" file type plugins enabled
+filetype plugin indent on
+
+" smart indentation
+set autoindent smartindent
+" wrap long lines 'on the next line'
+set wrap
+" since wrap is enabled, wrap starts at the 80th
+set formatoptions+=t
+
+" tabs are evil
+" number of spaces to use for (auto)indent step
+set shiftwidth=2
+" tab spaces
+set tabstop=2
 " tab size when editing, but since tabs are spaces, spaces number when editing
 set softtabstop=2
-set expandtab      " turn tabs to space
+" turn tabs to space
+set expandtab
 
-set ignorecase     " ignore case when searching
-set smartcase      " when we have different cases, make case sensitive search
-set hlsearch       " highlight search results
-set incsearch      " search while typing
+" ignore case when searching
+set ignorecase
+" when we have different cases, make case sensitive search
+set smartcase
+" highlight search results
+set hlsearch
+" search while typing
+set incsearch
 
 " show completion in menu
 set wildmenu
@@ -75,38 +80,20 @@ set wildmenu
 " list completion, better way since it doesnt complete non unique commands
 set wildmode=list:longest,list:full
 
+" ignore files when in wide mode
+set wildignore+=*swp,*.class,*.pyc,*~,*.png,*.jpg,*.gif,*.zip
+if has("win32")
+  set wildignore+=*\\tmp\\*,*.exe,.git\*,.hg\*,.svn\*
+else
+  set wildignore+=*/tmp/*,*.o,*.obj,*.so,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+" scroll when lasts 5 lines up/down
+set scrolloff=5
+
 " highlight matching bracket
 set showmatch
 
 " show partial command line status
 set showcmd
-
-" file type plugins enabled
-filetype plugin indent on
-
-" for performance while executing macros, IO is heavy bro
-set lazyredraw
-
-" expose special characters
-if $LANG =~ "utf-8"
-  set list listchars=tab:»·,trail:·,nbsp:·
-else
-  set list listchars=tab:>-,trail:.,nbsp:%
-endif
-
-" no comment when we create a new line starting by a commented line
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" by default, when vertically splitting, use right for the new window
-set splitbelow
-set splitright
-
-" use vertical diff by default
-set diffopt+=vertical
-
-" spell
-set spelllang=en_gb,pt_br
-
-" highlight every char after the 80th column
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 
