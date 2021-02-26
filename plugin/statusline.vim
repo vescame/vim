@@ -13,8 +13,6 @@ endfunction
 " Always show the status line
 set laststatus=2
 
-" my custom statuline
-
 " git status from fugitive
 set statusline=\ %{fugitive#head()}
 set statusline+=\ -
