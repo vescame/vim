@@ -23,9 +23,9 @@ inoremap " ""<Esc>i
 nnoremap Y y$
 
 " visit ALE errors
-nnoremap <leader>an :ALENext
-nnoremap <leader>ap :ALEPrevious
-nnoremap <leader>ad :ALEDetail
+nnoremap <leader>an :ALENext<cr>
+nnoremap <leader>ap :ALEPrevious<cr>
+nnoremap <leader>ad :ALEDetail<cr>
 
 " tabs navigation
 nnoremap <leader>tN :tabnew<cr>
@@ -44,6 +44,8 @@ nnoremap <leader>ep! :set paste!<cr>
 " move lines up/down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
