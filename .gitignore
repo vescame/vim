@@ -24,7 +24,4 @@ tags
 [._]backupdir
 
 # do not ignore clone-repos.sh
-pack/*
-!pack/repos.lst
-!pack/clone-repos.sh
-!pack/clone-repos.ps1
+pack/*/
