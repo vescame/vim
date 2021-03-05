@@ -45,6 +45,9 @@ setglobal fileencoding=utf-8
 set textwidth=79
 set colorcolumn=+1
 
+" autocomplete words with dash
+set iskeyword+=\-
+
 " file type plugins enabled
 filetype plugin indent on
 
