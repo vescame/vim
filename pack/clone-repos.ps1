@@ -1,7 +1,6 @@
-$repos = @("https://github.com/tpope/vim-fugitive",
-  "https://github.com/dense-analysis/ale.git")
-
 $current_dir = split-path $myInvocation.myCommand.path
+
+$repos = (get-content $current_dir\repos.lst)
 
 foreach ($i in $repos) {
   $username = (split-path -leaf (split-path $i))

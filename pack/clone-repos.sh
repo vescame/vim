@@ -1,17 +1,16 @@
 #!/bin/dash
 set -e
 
-repos="https://github.com/tpope/vim-fugitive
-https://github.com/dense-analysis/ale.git"
+cwd=`dirname $0`
 
-current_dir=`dirname $0`
+repos=`cat $cwd/repos.lst`
 
 for i in ${repos}
 do
   username=`echo $i | cut -d'/' -f4`
   reponame=`echo $i | cut -d'/' -f5 | cut -d'.' -f1`
 
-  repo_path=${current_dir}/${username}/start/${reponame}
+  repo_path=${cwd}/${username}/start/${reponame}
 
   if [ -d ${repo_path} ]; then
     echo "already cloned: ${i}"
