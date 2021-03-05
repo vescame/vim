@@ -11,7 +11,7 @@ foreach ($i in $repos) {
   if (test-path $repo_path) {
     write-host "already cloned: $i"
   } else {
-    new-item -path $repo_path -type dir
+    new-item -path $repo_path -type directory
     git clone $i $repo_path
   }
 }
