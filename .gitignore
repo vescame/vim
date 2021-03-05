@@ -25,5 +25,6 @@ tags
 
 # do not ignore clone-repos.sh
 pack/*
-!.pack/clone-repos.sh
-
+!pack/repos.lst
+!pack/clone-repos.sh
+!pack/clone-repos.ps1
