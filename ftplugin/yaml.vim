@@ -1,8 +1,5 @@
 " yaml.vim
-" set basic yaml configuration
+" yaml `filetype` configuration
 
-set ts=4
-set sts=4
-set sw=4
-set expandtab
+setlocal ts=4 sts=4 sw=4 expandtab
 
