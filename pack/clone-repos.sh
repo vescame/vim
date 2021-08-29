@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 set -e
 
 cwd=`dirname $0`
@@ -7,16 +7,16 @@ repos=`cat $cwd/repos.lst`
 
 for i in ${repos}
 do
-  username=`echo $i | cut -d'/' -f4`
-  reponame=`echo $i | cut -d'/' -f5 | cut -d'.' -f1`
+  username=`basename \`dirname $i\``
+  reponame=`basename $i | rev | cut -d '.' -f 2- | rev`
 
   repo_path=${cwd}/${username}/start/${reponame}
 
   if [ -d ${repo_path} ]; then
     echo "already cloned: ${i}"
   else
-    mkdir -p ${repo_path}
-    git clone $i ${repo_path}
+    echo mkdir -p ${repo_path}
+    echo git clone $i ${repo_path}
   fi
 
 done
