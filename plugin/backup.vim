@@ -25,14 +25,5 @@ set writebackup
 set backupcopy=no
 silent execute "set backupdir=" . s:mybackupdir
 
-" swap directory
-let s:myswapdir=g:vim_dir . "/.swapdir"
-if has("win32")
-  let s:myswapdir=g:vim_dir . "/_swapdir"
-endif
-
-call core#createDir(s:myswapdir)
-
 set swapfile
-silent execute "set directory=" . s:myswapdir
 
