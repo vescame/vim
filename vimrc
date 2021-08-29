@@ -2,6 +2,8 @@
 " author: vescm
 " year: 2020
 
+set background=dark
+
 " no vi extended compatibility
 " should be set at the very beginning
 set nocompatible
@@ -32,18 +34,15 @@ syntax on
 set backspace=indent,eol,start
 
 " numbers and relative number
-set number relativenumber
-
-" file encoding
-set encoding=utf-8
+set relativenumber
 
 " Unix for default file format
 set ffs=unix,dos,mac
 setglobal fileencoding=utf-8
+" file encoding
+set encoding=utf-8
 
-" Make it obvious where 80 characters is
-set textwidth=79
-set colorcolumn=+1
+" let g:limit_columns=1
 
 " autocomplete words with dash
 set iskeyword+=\-
@@ -53,10 +52,12 @@ filetype plugin indent on
 
 " smart indentation
 set autoindent smartindent
-" wrap long lines 'on the next line'
+
+" wrap lines longer than 80 columns
 set wrap
-" since wrap is enabled, wrap starts at the 80th
-set formatoptions+=t
+set wrapmargin=2
+set textwidth=80
+set linebreak
 
 " tabs are evil
 " number of spaces to use for (auto)indent step
@@ -77,13 +78,32 @@ set hlsearch
 " search while typing
 set incsearch
 
+" use vertical diff by default
+set diffopt+=vertical
+
+" buffer switch without having to save (godly)
+set hidden
+
+" by default, when vertically splitting, use right for the new window
+set splitbelow
+set splitright
+
+" do not redraw buffer while executing macros
+set lazyredraw
+
+" read content from disk when buffered file changed
+set autoread
+
+" hide cursor when writing
+set mousehide
+
 " show completion in menu
 set wildmenu
 
 " list completion, better way since it doesnt complete non unique commands
 set wildmode=list:longest,list:full
 
-" ignore files when in wide mode
+" ignore files when in wild mode
 set wildignore+=*swp,*.class,*.pyc,*~,*.png,*.jpg,*.gif,*.zip
 if has("win32")
   set wildignore+=*\\tmp\\*,*.exe,.git\*,.hg\*,.svn\*
