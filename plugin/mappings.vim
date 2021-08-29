@@ -10,15 +10,6 @@ nmap k gk
 vmap j gj
 vmap k gk
 
-" brackets completion
-inoremap ( ()<Esc>i
-inoremap { {}<Esc>i
-inoremap {<CR> {<CR>}<Esc>O
-inoremap [ []<Esc>i
-inoremap < <><Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
-
 " yank to $
 nnoremap Y y$
 
