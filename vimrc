@@ -34,7 +34,7 @@ syntax on
 set backspace=indent,eol,start
 
 " numbers and relative number
-set relativenumber
+set number relativenumber
 
 " Unix for default file format
 set ffs=unix,dos,mac
