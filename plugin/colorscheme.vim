@@ -4,5 +4,5 @@
 " dark background
 set background=dark
 
-colorscheme default
+colorscheme gruvbox
 
