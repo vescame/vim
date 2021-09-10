@@ -16,5 +16,3 @@ let g:netrw_winsize=25
 " vertical right splitting
 let g:netrw_altv=1
 
-command Netrw execute "Vexplore"
-

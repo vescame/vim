@@ -32,6 +32,10 @@ nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
 " enable paste (very useful)
 nnoremap <leader>ep! :set paste!<cr>
 
+" netrw/nerdtree/show directory structure
+nnoremap <leader>nl :Lexplore<cr>
+nnoremap <leader>ng :Rexplore<cr>
+
 " move lines up/down
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
