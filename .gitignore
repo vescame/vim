@@ -8,6 +8,7 @@
 # Session
 Session.vim
 Sessionx.vim
+sessions/
 
 # Temporary
 .netrwhist
