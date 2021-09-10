@@ -120,3 +120,7 @@ set showmatch
 " show partial command line status
 set showcmd
 
+" yank to the system clipboard
+nnoremap Y "+y
+vnoremap Y "+y
+
