@@ -1,7 +1,7 @@
 {
   "languageserver": {
     "kotlin": {
-      "command": "/home/viniciusescame/bin/kotlin-language-server/server/build/install/server/bin/kotlin-language-server",
+      "command": "$HOME/.local/lsp/kotlin-lsp/server/bin/kotlin-language-server",
       "filetypes": ["kotlin"]
     }
   }
