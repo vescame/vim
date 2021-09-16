@@ -17,7 +17,7 @@ set laststatus=2
 set statusline=\ %{fugitive#head()}
 set statusline+=\ -
 
-set statusline+=\ %f%m%r
+set statusline+=\ %t%m%r
 set statusline+=%=
 
 " ale status
