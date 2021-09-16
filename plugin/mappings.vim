@@ -2,7 +2,7 @@
 " all wanted keymappings
 
 " remove highlighting
-nnoremap <silent> <leader><cr> :noh<cr>
+nnoremap <silent> <leader><cr> :nohlsearch<cr>
 
 " better movement
 nmap j gj
@@ -14,35 +14,27 @@ vmap k gk
 nnoremap Y y$
 
 " visit ALE errors
-nnoremap <leader>an :ALENext<cr>
-nnoremap <leader>ap :ALEPrevious<cr>
-nnoremap <leader>ad :ALEDetail<cr>
+nnoremap <silent> <leader>an :ALENext<cr>
+nnoremap <silent> <leader>ap :ALEPrevious<cr>
+nnoremap <silent> <leader>ad :ALEDetail<cr>
 
 " tabs navigation
-nnoremap <leader>tN :tabnew<cr>
-nnoremap <leader>to :tabonly<cr>
-nnoremap <leader>tc :tabclose<cr>
-nnoremap <leader>tm :tabmove<cr>
+nnoremap <silent> <leader>tN :tabnew<cr>
+nnoremap <silent> <leader>to :tabonly<cr>
+nnoremap <silent> <leader>tc :tabclose<cr>
+nnoremap <silent> <leader>tm :tabmove<cr>
 
 " buffer navigation
-nnoremap <leader>bn :bnext<cr>
-nnoremap <leader>bp :bprevious<cr>
-nnoremap <leader>bd :bdelete<cr>:tabclose<cr>gT
+nnoremap <silent> <leader>bn :bnext<cr>
+nnoremap <silent> <leader>bp :bprevious<cr>
+nnoremap <silent> <leader>bd :bdelete<cr>:tabclose<cr>gT
 
 " enable paste (very useful)
-nnoremap <leader>ep! :set paste!<cr>
+nnoremap <silent> <leader>ep! :set paste!<cr>
 
 " netrw/nerdtree/show directory structure
-nnoremap <leader>nl :Lexplore<cr>
-nnoremap <leader>ng :Rexplore<cr>
-
-" move lines up/down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
+nnoremap <silent> <leader>nl :Lexplore<cr>
+nnoremap <silent> <leader>ng :Rexplore<cr>
 
 " remove trailing spaces
 vnoremap <leader>rtw :s/\s\+$//e<cr>
@@ -63,8 +55,4 @@ vnoremap <Up> <Nop>
 vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
-
-" tabulation does not exit visual mode
-vnoremap < <gv
-vnoremap > >gv
 
