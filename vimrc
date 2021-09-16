@@ -53,10 +53,9 @@ filetype plugin indent on
 " smart indentation
 set autoindent smartindent
 
-" wrap lines longer than 80 columns
+" "soft wrap" lines
 set wrap
-set wrapmargin=2
-set textwidth=80
+set nolist
 set linebreak
 
 " tabs are evil
