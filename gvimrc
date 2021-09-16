@@ -1,9 +1,5 @@
-" gvimrc.vim
-" loaded when gui_running, this is a vim core file
-" ===============================================
-
-" dark background in gui mode, without the need to assign a colorscheme
-highlight Normal guifg=white guibg=black
+" gvimrc
+" loaded when has('gui_running')
 
 let s:myopts_set=0
 function! ToggleGuiOpts()
@@ -24,7 +20,7 @@ autocmd VimEnter * call ToggleGuiOpts()
 command GuiOpts :call ToggleGuiOpts()
 
 " from help tm: 
-" Define a tip for a menu or tool.  {only in X11 and Win32 GUI}
+" Define a tip for a menu or tool. {only in X11 and Win32 GUI}
 set tm=500
 
 " termcap visualbell
