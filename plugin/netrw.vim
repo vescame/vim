@@ -1,9 +1,6 @@
 " netrw.vim
 " core netrw vim configuration
 
-" no banner
-let g:netrw_banner=0
-
 " tree list view
 let g:netrw_liststyle=3
 
