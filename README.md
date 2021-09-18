@@ -1,17 +1,28 @@
 # simple vim
-#### I was using with vim versions like 8.1 ~ 8.2
-#### slackware vim version: 7.4
+#### slackware vim version: 8.2
 
 has:
-- some linter
-- some git
+- linter
+- git
+- completion
+- finder
+- doc
+- gruvbox colorscheme
 
-plan to add:
-- be minimal
-- some completion
-- some support for jenkinsfile, dockerfile, vagrantfile etc
-
-currently has 3 plugins:
+currently has some plugins:
 - vim-fugitive
 - ale
+- vim-surround
+- fzf.vim
+- fzf
+- vimwiki
+- vim-startify
+- gruvbox
+- vim-go
+- kotlin-vim
+- coc.nvim
+- vim-commentary
+- vim-vinegar
+- vimwiki
+- vim-repeat
 
