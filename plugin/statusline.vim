@@ -13,8 +13,11 @@ endfunction
 " Always show the status line
 set laststatus=2
 
+" coc current function and status
+set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
+
 " git status from fugitive
-set statusline=\ %{fugitive#head()}
+set statusline+=%{fugitive#head()}
 set statusline+=\ -
 
 set statusline+=\ %t%m%r
@@ -24,8 +27,11 @@ set statusline+=%=
 set statusline+=%{HasErrors()}
 
 set statusline+=\ %y\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=[%{&fileformat}]
-set statusline+=\ %p%%
-set statusline+=\ %c
+set statusline+=[%{&fileformat}]\ [%c/%l\ %p%%\ %L]
+
+" space at the beginning
+set statusline^=\ 
+
+" space at the end
 set statusline+=\ 
 
