@@ -17,3 +17,5 @@ function! LinterStatus() abort
           \)
 endfunction
 
+let g:ale_linters = {'go': ['gopls']}
+
