@@ -25,4 +25,6 @@ currently has some plugins:
 - vim-vinegar
 - vimwiki
 - vim-repeat
+- markdown-preview.nvim
+- tagbar
 
