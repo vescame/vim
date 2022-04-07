@@ -30,7 +30,5 @@ if (has("gui_gtk2") || has("gui_gtk3")) && has("gui_running")
 
   command FontIncrease call guifont#increase()
   nnoremap <leader>+ :FontIncrease<CR>
-else
-  echoerr "you need to be running GVIM"
 endif
 
