@@ -23,6 +23,9 @@ command GuiOpts :call ToggleGuiOpts()
 " Define a tip for a menu or tool. {only in X11 and Win32 GUI}
 set tm=500
 
+" set DejaVu font as default
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 12
+
 " termcap visualbell
 set t_vb=
 
