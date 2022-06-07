@@ -17,7 +17,7 @@ set laststatus=2
 set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " git status from fugitive
-set statusline+=%{fugitive#head()}
+set statusline+=%{FugitiveHead()}
 set statusline+=\ -
 
 set statusline+=\ %t%m%r
