@@ -19,12 +19,16 @@ endfunction
 autocmd VimEnter * call ToggleGuiOpts()
 command GuiOpts :call ToggleGuiOpts()
 
-" from help tm: 
+" from help tm:
 " Define a tip for a menu or tool. {only in X11 and Win32 GUI}
 set tm=500
 
-" set DejaVu font as default
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ Book\ 12
+" set GUI font when under windows
+if has("gui_running")
+  if has("gui_win32")
+    set guifont=Courier_New:h14:cANSI
+  endif
+endif
 
 " termcap visualbell
 set t_vb=
