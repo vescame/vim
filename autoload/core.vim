@@ -21,3 +21,33 @@ function core#createDir(dirpath)
   endif
 endfunction
 
+function! core#generatePacksHelptags()
+  let s:plugins = core#listPluginsDirectories()
+
+  for spec in s:plugins
+    let docd = expand(join([spec, 'doc'], ''))
+    if isdirectory(docd)
+      let tagsfile = expand(join([docd, 'tags'], '/'))
+      if !filereadable(tagsfile)
+        silent! execute 'helptags' docd
+      endif
+    endif
+  endfor
+endfunction
+
+function! core#listPluginsDirectories()
+    let pack_dir = expand('~/vimfiles/pack')
+    let pack_subdirectories = []
+
+    if !isdirectory(pack_dir)
+        echom "Pack directory does not exist: " . pack_dir
+        return
+    endif
+
+    let pack_subdirectories = glob(pack_dir . '/**/', 1, 1)
+
+    let filtered_subdirectories = filter(pack_subdirectories, 'isdirectory(v:val."doc")')
+
+    return filtered_subdirectories
+endfunction
+
