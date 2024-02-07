@@ -12,5 +12,7 @@
         "usePlaceholders": true
       }
     }
-  }
+  },
+  "powershell.integratedConsole.showOnStartup": false,
+  "snippets.ultisnips.pythonPrompt": false
 }
