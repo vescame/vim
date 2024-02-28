@@ -123,3 +123,6 @@ set showcmd
 nnoremap Y "+y
 vnoremap Y "+y
 
+" capitalize words
+vnoremap gcu :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g <CR>
+
