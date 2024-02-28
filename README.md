@@ -1,30 +1,5 @@
 # simple vim
-#### slackware vim version: 8.2
 
-has:
-- linter
-- git
-- completion
-- finder
-- doc
-- gruvbox colorscheme
+installed plugins are on pack/repos.lst
 
-currently has some plugins:
-- vim-fugitive
-- ale
-- vim-surround
-- fzf.vim
-- fzf
-- vimwiki
-- vim-startify
-- gruvbox
-- vim-go
-- kotlin-vim
-- coc.nvim
-- vim-commentary
-- vim-vinegar
-- vimwiki
-- vim-repeat
-- markdown-preview.nvim
-- tagbar
 
