@@ -119,10 +119,3 @@ set showmatch
 " show partial command line status
 set showcmd
 
-" yank to the system clipboard
-nnoremap Y "+y
-vnoremap Y "+y
-
-" capitalize words
-vnoremap gcu :s/\<\(\w\)\(\w*\)\>/\u\1\L\2/g <CR>
-
