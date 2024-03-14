@@ -1,6 +1,9 @@
 " coc.nvim
 " conquer of completion plugin config
 
+" plugin list
+let g:coc_global_extensions = ['coc-powershell', 'coc-java', 'coc-python']
+
 " from coc.nvim example on github
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
