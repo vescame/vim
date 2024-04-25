@@ -64,3 +64,13 @@ vnoremap <Down> <Nop>
 vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 
+" replace word under cursor
+nnoremap <leader>W *``cgn
+
+" do not replace contents of the default register
+" whenever we delete something
+noremap dd "_dd
+
+" substitute current selection
+xnoremap <leader>S y<cmd>let @/=escape(@", '/')<cr>"_cgn
+
